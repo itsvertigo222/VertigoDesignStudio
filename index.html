@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertigo Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let currentIndex = 0;
+            const slides = $('.banner-slide');
+
+            function showSlide(index) {
+                slides.eq(currentIndex).fadeOut(0); 
+                currentIndex = (index + slides.length) % slides.length; 
+                slides.eq(currentIndex).fadeIn(0); 
+            }
+
+    
+            slides.hide().eq(currentIndex).show();
+
+        
+            setInterval(function() {
+                showSlide(currentIndex + 1);
+            }, 1000);
+        });
+    </script>
+    <script>
+    window.addEventListener('load', () => {
+        document.body.classList.add('loaded'); 
+    });
+</script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="vertnewlogo.png" alt="Vertigo Design Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner-slideshow">
+        <div class="slideshow-container">
+            <div class="banner-slide">
+                <img src="VERTBANNER1.png" alt="Banner Image 1">
+            </div>
+            <div class="banner-slide">
+                <img src="VERTBANNER2.png" alt="Banner Image 2">
+            </div>
+            <div class="banner-slide">
+                <img src="VERTBANNER3.png" alt="Banner Image 3">
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="hero">
+            <h1>Bring Your Vision To Life</h1>
+            <a href="#contact" class="contact-button">Contact Us</a>
+        </section>
+        <section class="featured-header">
+            <h2>Featured Projects</h2>
+        </section>
+
+        <section class="featured">
+            <div class="featured-item">
+                <img src="FIBFINprp.png" alt="Personal Work">
+                <div class="overlay">Future Is Bright</div>
+            </div>
+            <div class="featured-item">
+                <img src="FIN.png" alt="Flyer Design">
+                <div class="overlay">Beauty Is Pain</div>
+            </div>
+            <div class="featured-item">
+                <img src="MRN.png" alt="Clothing Design">
+                <div class="overlay">Morning Baseball Snapback</div>
+            </div>
+            <div class="featured-item">
+                <img src="selextions.png" alt="Brand Identity">
+                <div class="overlay">Selextions Cover Art</div>
+            </div>
+        </section>
+   <section class="vision">
+            <h2>My Brand & Vision</h2>
+            <p>Your vision is our passion. At Vertigo Design, we specialize in creating unique designs that resonate with your audience. Our goal is to transform your ideas into visual masterpieces, helping your brand stand out in a crowded marketplace. Over the years, I have expanded my brand with my twin brother, and we've taken a step into the fashion world by starting a brand called "Vertigo House." We have just dropped our latest collection and are so excited! Check it out now:<a href="https://www.vertigohouse.shop" target="_blank">www.vertigohouse.shop</a> </p>
+             <div class="promo-video">
+        <embed src="Promo.mp4" width="400" height="400" type="video/mp4" />
+    </div>
+</section>
+        </section>
+
+    <footer>
+        <p>&copy; 2024 Vertigo Design. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
